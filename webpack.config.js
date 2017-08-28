@@ -26,7 +26,7 @@ module.exports = {
           loader:"style-loader!css-loader!autoprefixer-loader!less-loader"
         },
         {
-          test:/\.(jpg|png|svg|ttf)$/,
+          test:/\.(jpg|png|svg|ttf|gif)$/,
           loader:"url-loader?limit=4096"
         },
         {
@@ -37,6 +37,10 @@ module.exports = {
         {
           test:/\.vue$/,
           loader:'vue-loader'
+        },
+        {
+          test: /vue-preview.src.*?js$/,
+          loader: 'babel-loader'
         }
       ]
     },
